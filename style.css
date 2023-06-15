@@ -7,7 +7,10 @@
 .body {
     max-width: 1600px;
     font-family: 'Lato', sans-serif;
-    
+}
+
+img {
+    max-width: 100%;
 }
 
 .content {
@@ -28,7 +31,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    height: 75px
+    min-height  : 75px
 }
 
 .header_left {
@@ -86,7 +89,7 @@
 .sale_box {
     display: grid;
     gap: 30px;
-    grid-template-columns: repeat(3, 360px);
+    grid-template-columns: repeat(3, 1fr);
     padding-left: calc(50% - 570px);
     padding-right: calc(50% - 570px);
     padding-top: 64px;
@@ -164,7 +167,7 @@
 .content_sale{
     margin-top: 48px;
     display: grid;
-    grid-template-columns: repeat(3, 360px);
+    grid-template-columns: repeat(auto-fit, 360px);
     justify-content: center;
     gap: 30px;
 }
