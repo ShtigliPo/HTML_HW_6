@@ -81,6 +81,10 @@ img {
     line-height: 38px;
     color: #222222;
 }
+
+.colortext {
+    color: #F16D7F;
+}
   
 .promo__content {
     padding-left: 64px;
@@ -231,4 +235,51 @@ img {
     border: 1px solid;
     border-color: #F26376;
     padding: 15px 39px 14px 39px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    
+    .header_left {
+        padding-left: 16px;
+    }
+
+    .header_right {
+        padding-right: 16px;
+    }
+
+    .header_account {
+        display: none;
+    }
+
+    .header_shopping_cart {
+        display: none;
+    }
+    
+    .promo_img {
+        display: none;
+    }
+    .promo__info {
+        margin-top: 148px;
+        margin-bottom: 149px
+    }
+
+    .promo__title {
+        font-size: 38px;
+        line-height: 46px;
+    }
+
+    .promo__heading {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .sale_box {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-left: 4.27%;
+        margin-right: 4.27%;
+        gap: 32px;
+    }
+
 }
