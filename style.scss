@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Lato;
+}
+
 summary {
     display: block;
 }
@@ -83,7 +87,6 @@ label {
     box-shadow: 6px 4px 35px rgba(0,0,0,0.21);
     width: 232px;
     height: 634px;
-    padding: 32px;
     box-sizing: border-box;
     position: absolute;
     z-index: 9999;
@@ -93,20 +96,59 @@ label {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    gap: 11px;
+    gap:20px;
 }
 
 .nav h4 {
     box-sizing: border-box;
     width: 100%;
-    padding: 0 144px 24px 33px;
     color: #000;
     font-family: Lato;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    padding-left: 33px;
+    padding-top: 32px;
 }
+
+.menu_item {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+li {
+    list-style-type: none;
+}
+
+.menu_item_title {
+    color: $colorSitePink;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 24px;
+    padding-left: 32px;
+}
+
+.menu_link {
+    display: flex;
+    color: $colorSiteGrey;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 53px;
+    padding-top: 12px;
+}
+
 
 .promo {
     padding-left: calc(50% - 800px);
@@ -373,9 +415,8 @@ label {
 }
 
 .button_browse:hover {
-    background-color: #F16D7F;
-    color: #FFFFFF;
-    
+    background-color: $colorSitePink;
+    color: #FFFFFF;   
 }
 
 .advantages__shop {
@@ -429,6 +470,206 @@ label {
     text-align: center;
     color: #FBFBFB;
 }
+
+.container {
+    max-width: 1160px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.shopping {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.shop__cart {
+    margin: 96px 0 128px;
+}
+
+.cart__card {
+    display: flex;
+    margin-bottom: 40px;
+    box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+}
+.cart__card img{
+    width: 262px;
+    height: 306px;
+    background-color: #F3EEEF;
+}
+
+.cart__card a {
+    display: contents;
+}
+
+.cart__card-text {
+    display: flex;
+    flex-direction: column;
+    padding: 22px 97px 62px 31px;
+    position: relative;
+    width: 390px
+}
+.cart__card-text h3 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #222222;
+    margin: 0 0 42px 0;
+}
+
+.cart__card-text > span {
+    margin-bottom:  6px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    color: $colorSiteGrey;
+}
+
+.cart__card .quantity {
+    display: flex;
+    &__input {
+        border: 1px solid #EAEAEA;
+        width: 44px;
+        height: 25px;
+        margin: 0 0 0 24px;
+        text-align: center;
+    }
+}
+
+.intro__text__decor {
+    color: $colorSitePink;
+}
+
+.cart__card-icon {
+    font-size: 30px;
+    position: absolute;
+    right: 22px;
+    cursor: pointer;
+    
+    &:hover path {
+    fill: $colorSitePink;
+    }
+}
+
+.shop__cart-button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72px;
+}
+
+.shop__cart-button button, .shop__cart-button a {
+    padding: 17px 40px 17px 40px;
+    border: 1px solid #A4A4A4;
+    background: none;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.shop__cart-button button:hover, .shop__cart-button a:hover {
+    background-color: $colorSitePink;
+    color: #FFFFFF;
+}
+
+.shop__forms {
+    margin-top: 113px;
+}
+
+.ship__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 57px;
+    & h4 {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;     
+        color: #222;
+        margin-bottom: 20px;
+    }
+    & input {
+        width: 360px;
+        height: 45px;
+        border: 1px solid $colorSiteStroke;
+        padding: 0 17px 0 17px;
+        margin-bottom: 20px;
+    }
+    & button {
+        background: none;
+        border: 1px solid $colorSiteStroke;
+        padding: 11px 14px 11px 14px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 13px;
+        color: $colorSiteStroke;
+        cursor: pointer;
+        transition: .3s;
+    }
+    & button:hover {
+        background-color: $colorSitePink;
+        color: #FFFFFF;
+    }
+}
+
+.check__form {
+    background: #F5F3F3;
+    padding: 39px 43px 42px 43px;
+    text-align: right;
+
+    & h6 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 11px;
+        line-height: 13px;
+        color: $colorSiteStroke;
+        margin-bottom: 12px;
+        & > span {
+            margin-left: 25px;
+        }
+    }
+
+    & h4 {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: normal;
+        color: #222;
+        & > span {
+            margin-left: 25px;
+            color: $colorSitePink;
+            font-weight: bold;
+        }
+    }
+
+    & button {
+        margin-top: 17px;
+        padding: 16px 42px 16px 42px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: $colorSiteStroke;
+        background: #ffffff;
+        border: 1px solid $colorSiteStroke;
+        cursor: pointer;
+        transition: .3s;
+    }    
+        & button:hover {
+            background-color: $colorSitePink;
+            color: #FFFFFF;
+        }
+}
+    
+
+   
 
 .branch__subscribe {
     background-image: url(./img/background_subscribe.jpg);
@@ -741,8 +982,6 @@ label {
 }
 
 .header__link__product {
-    padding-left: calc(50% - 570px);
-    padding-right: calc(50% - 570px);
     display: flex;
     justify-content: space-between;
     align-items: center;
